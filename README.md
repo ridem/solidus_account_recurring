@@ -1,44 +1,25 @@
-Spree Account Recurring [![Code Climate](https://codeclimate.com/github/vinsol/spree-account-recurring.png)](https://codeclimate.com/github/vinsol/spree-account-recurring) [![Build Status](https://travis-ci.org/vinsol/spree-account-recurring.svg?branch=3-0-stable)](https://travis-ci.org/vinsol/spree-account-recurring)
+Solidus Account Recurring [![Code Climate](https://codeclimate.com/github/vinsol/spree-account-recurring.png)](https://codeclimate.com/github/vinsol/spree-account-recurring) [![Build Status](https://travis-ci.org/vinsol/spree-account-recurring.svg?branch=3-0-stable)](https://travis-ci.org/vinsol/spree-account-recurring)
 =========================
 
-Spree extension to manage recurring payments/subscriptions using [Stripe Payment Gateway](https://stripe.com/).
+Solidus extension to manage recurring payments/subscriptions using [Stripe Payment Gateway](https://stripe.com/).
 
 All plans and subscription scenarios are been managed as per [Stripe Docs](https://stripe.com/docs/api)
 
 Installation
 ------------
 
-Install `spree_account_recurring` by adding the following to your `Gemfile`:
+Install `solidus_account_recurring` by adding the following to your `Gemfile`:
 
 ```ruby
-# Spree 3.0.x
-gem 'spree_account_recurring', '~> 2.0'
+# Solidus 1.2.0.alpha - currently master
+gem 'solidus_account_recurring', github:'ridem/solidus-account-recurring'
 ```
-
-```ruby
-# Spree 2.4.x
-gem 'spree_account_recurring', '~> 1.3'
-```
-
-For older version of Spree
-
-```ruby
-# Spree 2.3.x
-gem 'spree_account_recurring', '~> 1.2'
-
-# Spree 2.2.x
-gem 'spree_account_recurring', '~> 1.1'
-
-# Spree 2.1.x
-gem 'spree_account_recurring', '~> 1.0'
-```
-
 
 Bundle your dependencies and run the installation generator:
 
 ```shell
 bundle
-bundle exec rails g spree_account_recurring:install
+bundle exec rails g solidus_account_recurring:install
 ```
 
 Usage
@@ -105,7 +86,7 @@ When testing your applications integration with this extension you may use it's 
 Simply add this require statement to your spec_helper:
 
 ```ruby
-require 'spree_account_recurring/factories'
+require 'solidus_account_recurring/factories'
 ```
 
 Contributing
@@ -123,6 +104,4 @@ Contributing
 Credits
 -------
 
-[![vinsol.com: Ruby on Rails, iOS and Android developers](http://vinsol.com/vin_logo.png "Ruby on Rails, iOS and Android developers")](http://vinsol.com)
-
-Copyright (c) 2014 [vinsol.com](http://vinsol.com "Ruby on Rails, iOS and Android developers"), released under the New MIT License
+This project is a fork of spree-account-recurring.

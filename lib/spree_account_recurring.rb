@@ -1,2 +1,2 @@
-require 'spree_core'
-require 'spree_account_recurring/engine'
+require 'solidus_core'
+require 'solidus_account_recurring/engine'
