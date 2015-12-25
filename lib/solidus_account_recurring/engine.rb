@@ -1,6 +1,6 @@
-module SoliduseAccountRecurring
+module SolidusAccountRecurring
   class Engine < Rails::Engine
-    require 'spree/core'
+    # require 'solidus/core'
     isolate_namespace Spree
     engine_name 'solidus_account_recurring'
 
@@ -16,14 +16,16 @@ module SoliduseAccountRecurring
     end
 
     def self.activate
-      Dir.glob(File.join(File.dirname(__FILE__), '../../app/**/*_decorator*.rb')) do |c|
-        Rails.configuration.cache_classes ? require(c) : load(c)
+      ['app', 'lib'].each do |dir|
+        Dir.glob(File.join(File.dirname(__FILE__), "../../#{dir}/**/*_decorator*.rb")) do |c|
+          Rails.application.config.cache_classes ? require(c) : load(c)
+        end
       end
     end
 
     config.to_prepare &method(:activate).to_proc
 
-    initializer "spree.register.recurring_providers" do |app|
+    initializer "register recurring providers" do |app|
       app.config.spree.recurring_providers = [Spree::Recurring::StripeRecurring]
     end
   end
