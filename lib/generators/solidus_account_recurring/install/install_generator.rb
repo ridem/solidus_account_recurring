@@ -4,10 +4,10 @@ module SolidusAccountRecurring
 
       class_option :auto_run_migrations, :type => :boolean, :default => false
 
-      # def add_javascripts
-      #   append_file 'vendor/assets/javascripts/spree/frontend/all.js', "//= require spree/frontend/solidus_account_recurring\n"
-      #   append_file 'vendor/assets/javascripts/spree/backend/all.js', "//= require spree/backend/solidus_account_recurring\n"
-      # end
+      def add_javascripts
+        append_file 'vendor/assets/javascripts/spree/frontend/all.js', "//= require spree/frontend/solidus_account_recurring\n"
+        # append_file 'vendor/assets/javascripts/spree/backend/all.js', "//= require spree/backend/solidus_account_recurring\n"
+      end
       #
       # def add_stylesheets
       #   inject_into_file 'vendor/assets/stylesheets/spree/frontend/all.css', " *= require spree/frontend/solidus_account_recurring\n", :before => /\*\//, :verbose => true
