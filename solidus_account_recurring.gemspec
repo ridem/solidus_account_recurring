@@ -17,7 +17,7 @@ Gem::Specification.new do |s|
   s.require_path = 'lib'
   s.requirements << 'none'
 
-  s.add_dependency 'solidus_core', ['< 1.2.0', '>= 1.1.0.pre']
+  s.add_dependency 'solidus_core', ['< 1.4.0', '>= 1.1.0.pre']
   s.add_dependency 'stripe', '1.16.0'
   s.add_dependency 'stripe_tester'
 

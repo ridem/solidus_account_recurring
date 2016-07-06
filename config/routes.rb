@@ -13,7 +13,7 @@ Spree::Core::Engine.routes.draw do
   end
 
   namespace :recurring do
-    resources :plans, only: :index do
+    resources :plans, only: :index, controller: '/spree/plans' do
       resources :subscriptions, only: [:show, :create, :destroy, :new]
     end
   end
